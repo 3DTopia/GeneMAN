@@ -1,0 +1,402 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+#loading {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  /* background-color: #fff; */
+  z-index: 99;
+}
+
+#loading-image {
+  z-index: 100;
+}
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.inactiveLink {
+  pointer-events: none;
+  cursor: default;
+}
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+
+
+.publication-title {
+}
+
+.publication-banner {
+  max-height: parent;
+
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+}
+
+.publication-header .hero-body {
+}
+
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors {
+}
+
+.publication-authors a {
+   color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-banner img {
+}
+
+.publication-authors {
+  /*color: #4286f4;*/
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.publication-body img {
+}
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 0;
+  font-size: 0;
+}
+
+.results-carousel video {
+  margin: 0;
+}
+
+
+.interpolation-panel {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.interpolation-panel .interpolation-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.interpolation-video-column {
+  width: 10%;
+}
+
+.interpolation-panel .slider-custom {
+  margin: 0 !important;
+}
+
+.interpolation-panel .slider-custom {
+  margin: 0 !important;
+}
+
+#interpolation-image-wrapper {
+  width: 100%;
+}
+#interpolation-image-wrapper img {
+  border-radius: 5px;
+}
+
+
+/* .method-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+.method-image-grid img {
+  width: 100%;
+  height: auto;
+}
+.method-image-grid .caption {
+  text-align: justify;
+} */
+
+.method-image-container {
+  display: flex;
+  align-items: flex-end; /* 将 caption 底部对齐 */
+  grid-gap: 20px; /* 调整图像之间的间距 */
+}
+
+.imethod-mage-container img {
+  width: 100%;
+  height: auto; /* 确保图片的高度自适应 */
+}
+
+.method-caption {
+  text-align: justify;
+}
+
+.green-dashed-line {
+  border: 1px dashed #A9D18E;
+  width: 20px; 
+  height: 0px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+.blue-dashed-line {
+  border: 1px dashed #718ECF;
+  height: 0;
+  width: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+.columns-mid{
+  display:flex;
+  justify-content: space-evenly;
+}
+.column-mid{
+  display: block;
+  flex-basis: 0;
+  flex-grow: 0.5;
+  flex-shrink: 1;
+  padding: 0.75rem;
+}
+.slider-custom{
+  position:relative;
+  width:100%
+}
+.slider-custom .is-fullwidth-custom{
+  display: block;
+  width: 50%;
+}
+
+/* .slider-custom.is-large:not([orient=vertical]){
+  min-height:calc((1.5rem + 2px) * 1.25)
+}
+  input[type=range].slider.is-large:not([orient=vertical]) */
+
+/* Image maganify */
+* {box-sizing: border-box;}
+
+.img-magnifier-glass {
+  position: absolute;
+  z-index: 1;
+  border: 1px solid #5a6268;
+  border-radius: 0%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 300px;
+  height: 300px;
+  opacity:0;
+  pointer-events:none;
+}
+a:hover .img-magnifier-glass{
+  opacity:1;
+  /* pointer-events:initial; */
+}
+
+
+/* Style-mixing large slider */
+.mySlides {display: none}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #5a6268;
+  font-weight: bold;
+  font-size: 28px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(122, 115, 115, 0.824);
+}
+
+/* Caption text */
+.text {
+  color: #151313;
+  font-size: 20px;
+  /* padding: 8px 12px; */
+  position: relative;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.text-small {
+  color: #151313;
+  font-size: 10px;
+  /* padding: 8px 12px; */
+  position: relative;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.numbertext {
+  color: #171515;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+/* Table */
+th, td {
+  /* padding: 15px; */
+  /* background-color: #bbb; */
+}
+th, td {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 50px;
+  padding-right: 40px;
+}
+table, th, td {
+  border: 2px solid #bbb;
+  border-collapse: collapse;
+  border-left: none;
+  border-right: none;
+}
+
+
+.logos {
+  text-align: center;
+}

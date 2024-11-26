@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="GeneMAN">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GeneMAN</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <script src="https://kit.fontawesome.com/ec39017701.js" crossorigin="anonymous"></script>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+ 
+  <style>
+    .image-group {
+      display: flex;
+      justify-content: space-between;  
+    }
+    .image-group img {
+      flex: 1;
+    }
+    .image-group {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- <div id="loading">
+    <div class="loader"></div>
+  </div> -->
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <br><br><br>
+            <h1 class="title is-1 publication-title">GeneMAN: Generalizable Single-Image 3D Human Reconstruction from
+              Multi-Source Human Data</h1>
+            <!-- <h4 class="title is-4 publication-title" style="color:#5a6268;"> In Submission</h4> -->
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://scholar.google.com.hk/citations?user=CX-o0V4AAAAJ&hl=zh-CN&oi=ao" target="_blank">Wentao Wang</a><sup>1*</sup>, </span>  
+              <span class="author-block">
+                <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=OziSYh0AAAAJ" target="_blank">Hang Ye</a><sup>2*</sup>, </span>
+              <span class="author-block">
+                <a href="https://hongfz16.github.io/" target="_blank">Fangzhou Hong</a><sup>3</sup>, </span>
+              <span class="author-block">
+                <a href="https://yangxue0827.github.io/" target="_blank">Xue Yang</a><sup>1</sup>, </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=jSiStc4AAAAJ&view_op=list_works" target="_blank">Jianfu Zhang</a><sup>4</sup>, </span>
+              <span class="author-block">
+                <a href="https://cfcs.pku.edu.cn/english/people/faculty/yizhouwang/index.htm" target="_blank">Yizhou Wang</a><sup>2</sup>, </span>
+              <span class="author-block">
+                <a href="https://liuziwei7.github.io/" target="_blank">Ziwei Liu</a><sup>3</sup>, </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=lSDISOcAAAAJ" target="_blank">Liang Pan</a><sup>1&dagger;</sup> </span>
+                                            
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Shanghai AI Laboratory,</span>
+              <span class="author-block"><sup>2</sup>Peking University,</span>
+              <span class="author-block"><sup>3</sup>Nanyang Technological University,</span>
+              <span class="author-block"><sup>4</sup>Shanghai Jiao Tong University</span>
+              </br>
+              <span class="author-block" style="font-size: smaller;"><sup>*</sup>Equal Contribution,</span>
+              <span class="author-block" style="font-size: smaller;"><sup>&dagger;</sup>Corresponding Author</span>
+            </div>
+            
+            
+            
+            
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv Link. -->
+                <span class="link-block">
+                  <a href="" target="_blank" onclick="event.preventDefault();"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>Arxiv (Coming Soon)</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="" target="_blank" onclick="event.preventDefault();"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video (Coming Soon)</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="" target="_blank" onclick="event.preventDefault();"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>GitHub (Coming Soon)</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br><br>
+
+  <!-- Teaser Picture -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+          <img class="cover" src="./static/imgs/teaser.png" style="width:1000px; margin-bottom:20px;">
+
+          <div class="container">
+            <div id="results-carousel" class="carousel results-carousel">
+              <div class="item">
+                <video id="replay-video" controls muted preload autoplay loop width="100%">
+                  <source src="./static/videos/case001.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="item">
+                <video id="replay-video" controls muted preload autoplay loop width="100%">
+                  <source src="./static/videos/case002.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="item">
+                <video id="replay-video" controls muted preload autoplay loop width="100%">
+                  <source src="./static/videos/case003.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="item">
+                <video id="replay-video" controls muted preload autoplay loop width="100%">
+                  <source src="./static/videos/case004.mp4" type="video/mp4">
+                </video>
+                <br>
+              </div>
+              <div class="item">
+                <video id="replay-video" controls muted preload autoplay loop width="100%">
+                  <source src="./static/videos/case005.mp4" type="video/mp4">
+                </video>
+                <br>
+              </div>
+              <div class="item">
+                <video id="replay-video" controls muted preload autoplay loop width="100%">
+                  <source src="./static/videos/case006.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <p style="max-width: 1000px; margin: 00px auto; text-align: justify;">
+            <strong>GeneMAN is a generalizable framework for single-view-to-3D human reconstruction, built on a collection of multi-source human data.</strong>
+            Given a single in-the-wild image of a person, <strong>GeneMAN</strong> could reconstruct a high-quality 3D human model, regardless of its clothing, pose, or body proportions (<em>e.g.</em>, a full-body, a half-body, or a close-up shot) in the given image.
+          </p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Abstract. -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Given a single in-the-wild human photo, it remains a challenging task to reconstruct a high-fidelity 3D human model. Existing methods face difficulties including a) the varying body proportions captured by in-the-wild human images; b) diverse personal belongings within the shot; and c) ambiguities in human postures and inconsistency in human textures. In addition, the scarcity of high-quality human data intensifies the challenge.
+              To address these problems, we propose a <strong>Gene</strong>ralizable image-to-3D hu<strong>MAN</strong> reconstruction framework, dubbed <strong>GeneMAN</strong>, building upon a comprehensive multi-source collection of high-quality human data, including 3D scans, multi-view videos, single photos, and our generated synthetic human data. 
+              GeneMAN encompasses three key modules. 1) Without relying on parametric human models (<em>e.g.</em>, SMPL), GeneMAN first trains a human-specific text-to-image diffusion model and a view-conditioned diffusion model, serving as GeneMAN 2D human prior and 3D human prior for reconstruction, respectively. 
+              2) With the help of the pretrained human prior models, the Geometry Initialization-&-Sculpting pipeline is leveraged to recover high-quality 3D human geometry given a single image. 3) To achieve high-fidelity 3D human textures, GeneMAN employs the Multi-Space Texture Refinement pipeline, consecutively refining textures in the latent and the pixel spaces. Extensive experimental results demonstrate that GeneMAN could generate high-quality 3D human models from a single image input, outperforming prior state-of-the-art methods. 
+              Notably, GeneMAN could reveal much better generalizability in dealing with in-the-wild images, often yielding high-quality 3D human models in natural poses with common items, regardless of the body proportions in the input images.
+            </p>
+          </div>
+        </div>
+      </div>
+  </section>
+ 
+
+
+ <!-- / Overview.   -->
+  <section class="section">
+    <div class="container is-max-desktop" style="max-width: 800px; margin: 0 auto;">
+      <div class="content has-text-centered">
+        <h2 class="title is-3"><strong>Overview</strong></h2>
+        <div class="content has-text-justified" style="font-size: 0.9rem; line-height: 1.6;">
+          <img src="./static/imgs/overview.png" alt="Image 1" style="width: 100%; max-width: 800px; display: block; margin: 10px auto;">
+          <p>
+            <strong>Overview of the Multi-Source Human Dataset and Our GeneMAN Pipeline. </strong>We have constructed a multi-source human dataset comprising 3D scans, videos, 2D images, and synthetic data. This dataset is utilized to train human-specific 2D and 3D prior models, which provide generalizable geometric and texture priors for our GeneMAN framework. 
+            Through geometry initialization, sculpting, and multi-space texture refinement in GeneMAN, we achieve high-fidelity 3D human body reconstruction from single in-the-wild images.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+<!-- Method. --> 
+<section class="section">
+  <div class="container is-max-desktop" style="max-width: 800px; margin: 0 auto;">
+    <div class="content has-text-centered">  
+      <h2 class="title is-3" ><strong>Method</strong></h2>
+      <div class="content has-text-justified" style="font-size: 0.9rem; line-height: 1.6;">  
+        <img src="./static/imgs/geo.png" alt="Image 1" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto; margin-top: 20px;">
+        <img src="./static/imgs/tex.png" alt="Image 2" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto; margin-top: 00px;">
+        <p>
+          <strong>Geometry Initialization & Sculpting.</strong> During the geometry reconstruction stage, we initialize a template-free geometry using NeRF, incorporating GeneMAN 2D and 3D priors with SDS losses. Alongside diffusion-based guidance, a reference loss ensures alignment with the input image. We then convert NeRF into DMTet for high-resolution refinement, guided by pretrained human-specific normal- and depth-adapted diffusion models.
+          <strong>Multi-Space Texture Refinement Stage.</strong> In the texture generation stage, we propose multi-space texture refinement to optimize texture in both latent space and pixel space. First, we generate the coarse textures using multi-view texturing, which are then iteratively refined in latent space. Subsequently, detailed textures are obtained by optimizing the UV map in pixel space with a 2D prior-based ControlNet.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Results. -->
+<section class="section">
+  <div class="container is-max-desktop" style="max-width: 800px; margin: 0 auto;">
+    <h2 class="title is-3 has-text-centered">Experiment</h2>
+    <h2 class="title is-5 has-text-centered">Quantitative Comparison</h2>
+    <div class="content has-text-justified" style="font-size: 0.9rem; line-height: 1.6;">
+      <img src="./static/imgs/quant_cmp.png" alt="Image 1" style="width: 100%; max-width: 800px; height: auto;">
+    </div>
+    <h2 class="title is-5 has-text-centered">Qualitative Comparison</h2>
+    <div class="content has-text-justified" style="font-size: 0.9rem; line-height: 1.6;">
+      <img src="./static/imgs/qual_cmp.png" alt="Image 2" style="width: 100%; max-width: 800px; height: auto;">
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column" style="width: 100%;">
+        <h2 class="title is-3">More Qualitative Results</h2>
+        <h2 class="title is-5 has-text-centered">Geometric Comparison on in-the-wild data</h2>
+        <div class="hero-body" style="padding: 0; text-align: center;">
+          <video controls muted preload autoplay loop style="width: 100%; max-width: 1000px; height: auto;">
+            <source src="./static/videos/supp/supp_geo001.mp4" type="video/mp4">
+          </video>
+          <hr>
+          <video controls muted preload autoplay loop style="width: 100%; max-width: 1000px; height: auto;">
+            <source src="./static/videos/supp/supp_geo002.mp4" type="video/mp4">
+          </video>
+          <hr>
+          <video controls muted preload autoplay loop style="width: 100%; max-width: 1000px; height: auto;">
+            <source src="./static/videos/supp/supp_geo003.mp4" type="video/mp4">
+          </video>
+          <hr>
+          <video controls muted preload autoplay loop style="width: 100%; max-width: 1000px; height: auto;">
+            <source src="./static/videos/supp/supp_geo004.mp4" type="video/mp4">
+          </video>
+        </div>
+        <h2 class="title is-5 has-text-centered" style="margin-top: 20px">Comparison on in-the-wild data</h2>
+          <div class="hero-body" style="padding: 0; text-align: center;"> 
+          <video controls muted preload autoplay loop style="width: 100%; max-width: 1000px; height: auto;">
+            <source src="./static/videos/supp/supp001.mp4" type="video/mp4">
+          </video>
+          <hr>
+          <video controls muted preload autoplay loop style="width: 100%; max-width: 1000px; height: auto;">
+            <source src="./static/videos/supp/supp002.mp4" type="video/mp4">
+          </video>
+          <hr>
+          <video controls muted preload autoplay loop style="width: 100%; max-width: 1000px; height: auto;">
+            <source src="./static/videos/supp/supp003.mp4" type="video/mp4">
+          </video>
+          <hr>
+          <video controls muted preload autoplay loop style="width: 100%; max-width: 1000px; height: auto;">
+            <source src="./static/videos/supp/supp004.mp4" type="video/mp4">
+          </video>
+          <hr>
+          <video controls muted preload autoplay loop style="width: 100%; max-width: 1000px; height: auto;">
+            <source src="./static/videos/supp/supp005.mp4" type="video/mp4">
+          </video>
+          <hr>
+          <video controls muted preload autoplay loop style="width: 100%; max-width: 1000px; height: auto;">
+            <source src="./static/videos/supp/supp006.mp4" type="video/mp4">
+          </video>
+          <hr>
+          <video controls muted preload autoplay loop style="width: 100%; max-width: 1000px; height: auto;">
+            <source src="./static/videos/supp/supp007.mp4" type="video/mp4">
+          </video>
+          <hr>
+          <video controls muted preload autoplay loop style="width: 100%; max-width: 1000px; height: auto;">
+            <source src="./static/videos/supp/supp008.mp4" type="video/mp4">
+          </video>
+        </div>
+          <h2 class="title is-5 has-text-centered" style="margin-top: 20px">Comparison on CAPE data</h2>
+            <div class="hero-body" style="padding: 0; text-align: center;"> 
+            <video controls muted preload autoplay loop style="width: 100%; max-width: 1000px; height: auto;">
+              <source src="./static/videos/supp/cape001.mp4" type="video/mp4">
+            </video>
+            <hr>
+            <video controls muted preload autoplay loop style="width: 100%; max-width: 1000px; height: auto;">
+              <source src="./static/videos/supp/cape002.mp4" type="video/mp4">
+            </video>
+            <hr>
+            <video controls muted preload autoplay loop style="width: 100%; max-width: 1000px; height: auto;">
+              <source src="./static/videos/supp/cape003.mp4" type="video/mp4">
+            </video>
+            <hr>
+            <video controls muted preload autoplay loop style="width: 100%; max-width: 1000px; height: auto;">
+              <source src="./static/videos/supp/cape004.mp4" type="video/mp4">
+            </video>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <script>
+    $(window).on('load', function () {
+      $('#loading').hide();
+    })
+  </script>
+</body>
+
+</html>
