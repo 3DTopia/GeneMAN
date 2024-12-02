@@ -32,7 +32,7 @@
 <div align="center">
 <h4 align="center">
   <a href="https://roooooz.github.io/GeneMAN/" target='_blank'>[Project Page]</a> •
-  <a href="http://arxiv.org/abs/2411.18624" target='_blank'>[arXiv]</a> •
+  <a href="http://arxiv.org/abs/2411.18624" target='_blank'>[ArXiv]</a> •
   <a href="https://www.youtube.com/watch?v=bZRmLgoNVAI" target='_blank'>[Demo Video]</a> 
 </h4>
 
