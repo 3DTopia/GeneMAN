@@ -25,7 +25,7 @@
 <img src="./assets/teaser.png" width="96%" height="98%">
 </div>
 
-<table style="border-collapse: collapse;">
+
 <table style="border-collapse: collapse;">
     <tr>
         <td style="padding: 0; margin: 0;"><img src="assets/woman_001_tex.gif" width="100%" style="display: block;"/><img src="assets/woman_001_geo.gif" width="100%" style="display: block;"/></td>
@@ -42,7 +42,7 @@
         <td style="padding: 0; margin: 0;"><img src="assets/kid_003_tex.gif" width="100%" style="display: block;"/><img src="assets/kid_003_geo.gif" width="100%" style="display: block;"/></td>
     </tr>
 </table>
-</table>
+
 GeneMAN is a generalizable framework for single-view-to-3D human reconstruction, built on a collection of multi-source human data. Given a single in-the-wild image of a person, GeneMAN could reconstruct a high-quality 3D human model, regardless of its clothing, pose, or body proportions (e.g., a full-body, a half-body, or a close-up shot) in the given image.
 
 ---
