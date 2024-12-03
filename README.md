@@ -28,7 +28,7 @@
 
 <table style="border-collapse: collapse;">
     <tr>
-        <td style="padding: 0; margin: 0;"><img src="assets/woman_001_tex.gif" width="100%" style="display: block;"/><img src="assets/woman_001_geo.gif" width="100%" style="display: block;"/></td>
+        <td style="padding: 0; margin: 0;"><img src="assets/woman_001_tex.gif" width="100%" style="display: block;"/><img src="assets/woman_001_geo.gif" width="100%"/></td>
         <!-- <td style="padding: 0; margin: 0;"><img src="assets/woman_002_tex.gif" width="100%" style="display: block;"/><img src="assets/woman_002_geo.gif" width="100%" style="display: block;"/></td> -->
         <!-- <td style="padding: 0; margin: 0;"><img src="assets/woman_003_tex.gif" width="100%" style="display: block;"/><img src="assets/woman_003_geo.gif" width="100%" style="display: block;"/></td> -->
         <td style="padding: 0; margin: 0;"><img src="assets/woman_004_tex.gif" width="100%" style="display: block;"/><img src="assets/woman_004_geo.gif" width="100%" style="display: block;"/></td>
