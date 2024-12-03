@@ -28,14 +28,14 @@
 <table style="border-collapse: collapse;">
     <tr>
         <td style="padding: 0; margin: 0;"><img src="assets/woman_001_tex.gif" width="100%" style="display: block;"/><img src="assets/woman_001_geo.gif" width="100%" style="display: block;"/></td>
-        <td style="padding: 0; margin: 0;"><img src="assets/woman_002_tex.gif" width="100%" style="display: block;"/><img src="assets/woman_002_geo.gif" width="100%" style="display: block;"/></td>
-        <td style="padding: 0; margin: 0;"><img src="assets/woman_003_tex.gif" width="100%" style="display: block;"/><img src="assets/woman_003_geo.gif" width="100%" style="display: block;"/></td>
+        <!--  <td style="padding: 0; margin: 0;"><img src="assets/woman_002_tex.gif" width="100%" style="display: block;"/><img src="assets/woman_002_geo.gif" width="100%" style="display: block;"/></td> -->
+        <!--  <td style="padding: 0; margin: 0;"><img src="assets/woman_003_tex.gif" width="100%" style="display: block;"/><img src="assets/woman_003_geo.gif" width="100%" style="display: block;"/></td> -->
         <td style="padding: 0; margin: 0;"><img src="assets/woman_004_tex.gif" width="100%" style="display: block;"/><img src="assets/woman_004_geo.gif" width="100%" style="display: block;"/></td>
         <td style="padding: 0; margin: 0;"><img src="assets/kid_001_tex.gif" width="100%" style="display: block;"/><img src="assets/kid_001_geo.gif" width="100%" style="display: block;"/></td>
         <td style="padding: 0; margin: 0;"><img src="assets/kid_004_tex.gif" width="100%" style="display: block;"/><img src="assets/kid_004_geo.gif" width="100%" style="display: block;"/></td>
         <td style="padding: 0; margin: 0;"><img src="assets/man_001_tex.gif" width="100%" style="display: block;"/><img src="assets/man_001_geo.gif" width="100%" style="display: block;"/></td>
         <td style="padding: 0; margin: 0;"><img src="assets/man_002_tex.gif" width="100%" style="display: block;"/><img src="assets/man_002_geo.gif" width="100%" style="display: block;"/></td>
-        <td style="padding: 0; margin: 0;"><img src="assets/man_003_tex.gif" width="100%" style="display: block;"/><img src="assets/man_003_geo.gif" width="100%" style="display: block;"/></td>
+     <!-- <td style="padding: 0; margin: 0;"><img src="assets/man_003_tex.gif" width="100%" style="display: block;"/><img src="assets/man_003_geo.gif" width="100%" style="display: block;"/></td> -->
         <td style="padding: 0; margin: 0;"><img src="assets/woman_005_tex.gif" width="100%" style="display: block;"/><img src="assets/woman_005_geo.gif" width="100%" style="display: block;"/></td>
         <td style="padding: 0; margin: 0;"><img src="assets/kid_002_tex.gif" width="100%" style="display: block;"/><img src="assets/kid_002_geo.gif" width="100%" style="display: block;"/></td>
         <td style="padding: 0; margin: 0;"><img src="assets/kid_003_tex.gif" width="100%" style="display: block;"/><img src="assets/kid_003_geo.gif" width="100%" style="display: block;"/></td>
