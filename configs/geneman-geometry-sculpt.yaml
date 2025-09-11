@@ -1,0 +1,163 @@
+name: "geneman-geometry-sculpt"
+tag: "${rmspace:${system.prompt_processor.prompt},_}"
+exp_root_dir: "outputs"
+seed: 0
+
+data_type: "single-image-datamodule"
+data:
+  image_path: ./load/images/hamburger_rgba.png
+  height: 512
+  width: 512
+  default_elevation_deg: 0.0
+  default_azimuth_deg: 0.0
+  default_camera_distance: 3.0
+  default_fovy_deg: 20.0
+  requires_depth: true
+  requires_normal: true
+  sampling_type: "full_body"
+  random_camera:
+    batch_size: 1
+    width: 512
+    height: 512
+    camera_distance_range: [3, 3.5]
+    fovy_range: [20, 25]
+    elevation_range: [-20, 20]
+    azimuth_range: [-180, 180]
+
+    # part aware zoom-in
+    head_camera_distance_range: [0.8, 1.0]
+    half_camera_distance_range: [1.5, 2.0]  # half-body
+    # head_elevation_range: [-10, 10]
+    # head_azimuth_range: [-180, 180]
+
+    camera_perturb: 0.
+    center_perturb: 0.
+    up_perturb: 0.
+    eval_camera_distance: 3
+    eval_fovy_deg: 20.
+    eval_elevation_deg: 0.
+    n_val_views: 120
+    sampling_type: ${data.sampling_type}
+
+system_type: "geneman-system"
+system:
+  stage: "geometry"
+  start_sdf_loss_step: 0
+  sampling_type: ${data.sampling_type}
+
+  geometry_type: "implicit-sdf"
+  geometry:
+    radius: 1
+    n_feature_dims: 0
+    isosurface_resolution: 512
+    isosurface_deformable_grid: false
+    isosurface_coarse_to_fine: false
+    use_sdf_loss: true
+    start_sdf_loss_step: ${system.start_sdf_loss_step}
+    pos_encoding_config:
+      otype: ProgressiveBandHashGrid # use progressive positional encoding
+      n_levels: 16
+      n_features_per_level: 2
+      log2_hashmap_size: 19
+      base_resolution: 16
+      per_level_scale: 1.381912879967776 # max resolution 2048
+      start_level: 8 # resolution ~200
+      start_step: 250
+      update_steps: 250
+    
+    # initialize SDF using a guide mesh
+    shape_init: mesh:./load/shapes/t-pose.obj
+    shape_init_params: 1.0
+    # shape_init_mesh_up: +y
+    # shape_init_mesh_front: +z
+
+  material_type: "no-material" # unused
+  material:
+    n_output_dims: 0
+
+  background_type: "solid-color-background" # unused
+
+  renderer_type: "nvdiff-rasterizer"
+  renderer:
+    use_sdf_loss: ${system.geometry.use_sdf_loss}
+    context_type: cuda
+    normal_type: 'camera'
+
+  prompt_processor_type: "stable-diffusion-prompt-processor"
+  prompt_processor:
+    pretrained_model_name_or_path: "./pretrained_models/normal-adapted-sd1.5"
+    prompt: ???
+    front_threshold: 45.
+    back_threshold: 45.
+    human_part_prompt: true
+
+  prompt_processor_add_type: "stable-diffusion-prompt-processor"
+  prompt_processor_add:
+    pretrained_model_name_or_path: "./pretrained_models/depth-adapted-sd1.5"
+    prompt: ???
+    front_threshold: 45.
+    back_threshold: 45.
+    human_part_prompt: true
+
+  guidance_type: "sds-du-guidance" # normal sds
+  guidance:
+    pretrained_model_name_or_path: "./pretrained_models/normal-adapted-sd1.5"
+    use_sds: true
+    guidance_scale: 30  # diversity
+    min_step_percent: [2000, 0.02, 0.02, 2001] # growing
+    max_step_percent: [2000, 0.80, 0.21, 2001] # growing
+    per_editing_step: -1 # unused
+
+  guidance_add_type: "sds-du-guidance" # depth sds
+  guidance_add:
+    pretrained_model_name_or_path: "./pretrained_models/depth-adapted-sd1.5"
+    use_sds: true
+    guidance_scale: 30  # diversity
+    min_step_percent: [2000, 0.02, 0.02, 2001] # growing
+    max_step_percent: [2000, 0.81, 0.11, 2001] # growing
+    per_editing_step: -1 # unused
+
+  loggers:
+    wandb:
+      enable: false
+      project: 'threestudio'
+      name: None
+
+  loss:
+    lambda_sds: 1
+    lambda_sds_add: 1
+    lambda_normal: 3000 
+    lambda_vgg: 100
+    lambda_mask: 1.0
+    lambda_depth: 0.1
+    lambda_depth_rel: 0
+    lambda_sdf: 1500
+    lambda_normal_consistency: [2000, 0., 1000., 2001]  # 5000
+    lambda_laplacian_smoothness: [2000, 0., 5000., 2001]  # 10000
+
+  freq:
+    n_ref: 2
+    ref_or_guidance: "alternate"
+    guidance_eval: 0
+    ref_only_steps: 0
+
+
+  optimizer:
+    name: AdamW
+    args:
+      lr: 0.00002
+      betas: [0.9, 0.99]
+      eps: 1.e-15
+  
+trainer:
+  max_steps: 3000
+  log_every_n_steps: 1
+  num_sanity_val_steps: 1
+  val_check_interval: 1000
+  enable_progress_bar: true
+  precision: 32
+
+checkpoint:
+  save_last: true # save at each validation time
+  save_top_k: -1
+  every_n_train_steps: 3001  # 1000
