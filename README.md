@@ -13,10 +13,10 @@
     <a href='https://scholar.google.com/citations?user=lSDISOcAAAAJ&hl=zh-CN' target='_blank'>Liang Pan</a><sup>1&dagger;</sup>&ensp;
 </div>
 <div>
-    <sup>1</sup>Shanghai AI Laboratory&emsp; 
-    <sup>2</sup>Peking University&emsp; 
-    <sup>3</sup>Nanyang Technological University&emsp; 
-    <sup>3</sup>Shanghai Jiao Tong University&emsp; 
+    <sup>1</sup>Shanghai AI Laboratory&ensp; 
+    <sup>2</sup>Peking University&ensp; 
+    <sup>3</sup>Nanyang Technological University&ensp; 
+    <sup>3</sup>Shanghai Jiao Tong University&ensp; 
     </br>
     <sup>*</sup>Equal Contribution
     <sup>&dagger;</sup>Corresponding Author
