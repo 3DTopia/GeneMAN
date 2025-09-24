@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>GeneMAN: Generalizable Single-Image 3D Human Reconstruction from Multi-Source Human Datas</h1>
+<h1>GeneMAN: Generalizable Single-Image 3D Human Reconstruction from Multi-Source Human Data</h1>
 
 <div>
     <a href="https://scholar.google.com.hk/citations?user=CX-o0V4AAAAJ&hl=zh-CN&oi=ao" target="_blank">Wentao Wang</a><sup>1*</sup>&emsp;
