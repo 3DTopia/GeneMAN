@@ -3,14 +3,14 @@
 <h1>GeneMAN: Generalizable Single-Image 3D Human Reconstruction from Multi-Source Human Data</h1>
 
 <div>
-    <a href="https://scholar.google.com.hk/citations?user=CX-o0V4AAAAJ&hl=zh-CN&oi=ao" target="_blank">Wentao Wang</a><sup>1*</sup>&emsp;
-    <a href="https://alvinyh.github.io/" target="_blank">Hang Ye</a><sup>2*</sup>&emsp;
-    <a href="https://hongfz16.github.io/" target="_blank">Fangzhou Hong</a><sup>3</sup>&emsp;
-    <a href="https://yangxue0827.github.io/" target="_blank">Xue Yang</a><sup>1</sup>&emsp;
-    <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=jSiStc4AAAAJ&view_op=list_works" target="_blank">Jianfu Zhang</a><sup>4</sup>&emsp;
-    <a href="https://cfcs.pku.edu.cn/english/people/faculty/yizhouwang/index.htm" target="_blank">Yizhou Wang</a><sup>2</sup>&emsp;
-    <a href='https://liuziwei7.github.io/' target='_blank'>Ziwei Liu</a><sup>3</sup>&emsp;
-    <a href='https://scholar.google.com/citations?user=lSDISOcAAAAJ&hl=zh-CN' target='_blank'>Liang Pan</a><sup>1&dagger;</sup>&emsp;
+    <a href="https://scholar.google.com.hk/citations?user=CX-o0V4AAAAJ&hl=zh-CN&oi=ao" target="_blank">Wentao Wang</a><sup>1*</sup>&ensp;
+    <a href="https://alvinyh.github.io/" target="_blank">Hang Ye</a><sup>2*</sup>&ensp;
+    <a href="https://hongfz16.github.io/" target="_blank">Fangzhou Hong</a><sup>3</sup>&ensp;
+    <a href="https://yangxue0827.github.io/" target="_blank">Xue Yang</a><sup>1</sup>&ensp;
+    <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=jSiStc4AAAAJ&view_op=list_works" target="_blank">Jianfu Zhang</a><sup>4</sup>&ensp;
+    <a href="https://cfcs.pku.edu.cn/english/people/faculty/yizhouwang/index.htm" target="_blank">Yizhou Wang</a><sup>2</sup>&ensp;
+    <a href='https://liuziwei7.github.io/' target='_blank'>Ziwei Liu</a><sup>3</sup>&ensp;
+    <a href='https://scholar.google.com/citations?user=lSDISOcAAAAJ&hl=zh-CN' target='_blank'>Liang Pan</a><sup>1&dagger;</sup>&ensp;
 </div>
 <div>
     <sup>1</sup>Shanghai AI Laboratory&emsp; 
