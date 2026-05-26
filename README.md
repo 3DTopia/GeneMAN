@@ -16,7 +16,7 @@
     <sup>1</sup>Shanghai AI Lab&emsp; 
     <sup>2</sup>Peking University&emsp; 
     <sup>3</sup>S-Lab, NTU&emsp; 
-    <sup>3</sup>Shanghai Jiao Tong University&emsp; 
+    <sup>4</sup>Shanghai Jiao Tong University&emsp; 
     </br>
     <sup>*</sup>Equal Contribution
     <sup>&dagger;</sup>Corresponding Author
@@ -42,7 +42,7 @@
     </tr>
 </table>
 
-GeneMAN is a generalizable framework for single-view-to-3D human reconstruction, built on a collection of multi-source human data. Given a single in-the-wild image of a person, GeneMAN could reconstruct a high-quality 3D human model, regardless of its clothing, pose, or body proportions (e.g., a full-body, a half-body, or a close-up shot) in the given image.
+GeneMAN is a generalizable framework for single-view-to-3D human reconstruction, built on a collection of multi-source human data. Given a single in-the-wild image of a person, GeneMAN can reconstruct a high-quality 3D human model, regardless of its clothing, pose, or body proportions (e.g., a full-body, a half-body, or a close-up shot) in the given image.
 
 ---
 
@@ -109,7 +109,7 @@ Copy the `pretrained_models` folder into `GeneMAN/pretrained_models`.  Copy the 
   - YOLO11, BLIP2 and Sapiens models will be downloaded automatically on first use.
 
 
-After downloading, the GeneMAN folder is structured like:
+After downloading, the GeneMAN folder should be structured as follows:
 
 
 ```
@@ -192,4 +192,3 @@ If you find this work useful for your research, please consider citing our paper
   year={2024}
 }
 ```
-
